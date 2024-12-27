@@ -13,7 +13,7 @@
 			system:
 			let
 				pkgs = import nixpkgs { inherit system; };
-				wthrr-the-weathercrab =
+				ww =
 					{
 						lib,
 						openssl,
@@ -21,7 +21,7 @@
 						rustPlatform,
 					}:
 					rustPlatform.buildRustPackage {
-						name = "wthrr-the-weathercrab";
+						name = "ww";
 						src = lib.cleanSource ./.;
 						cargoLock.lockFile = ./Cargo.lock;
 						nativeBuildInputs = [
@@ -38,16 +38,16 @@
 
 						meta = with lib; {
 							license = licenses.mit;
-							homepage = "https://github.com/ttytm/wthrr-the-weathercrab";
+							homepage = "https://github.com/andygeorge/ww";
 							platforms = platforms.all;
 						};
 					};
 			in
 			{
-				packages.default = pkgs.callPackage wthrr-the-weathercrab { };
+				packages.default = pkgs.callPackage ww { };
 				apps.default = {
 					type = "app";
-					program = "${self.outputs.packages.${system}.default}/bin/wthrr";
+					program = "${self.outputs.packages.${system}.default}/bin/ww";
 				};
 			}
 		);
