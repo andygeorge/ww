@@ -1,4 +1,4 @@
-# 🦀 ww
+# 🦀 `ww`
 
 [![][ci_shield]](https://github.com/andygeorge/ww/actions/workflows/ci.yml?query=branch%3Amain)
 [![][last_commit_shield]](https://github.com/andygeorge/ww/commits/main)
@@ -132,7 +132,7 @@ Win: `%USERPROFILE%\AppData\Roaming\ww\`
             rowspan: double, // Graph height: `double` | `single`
             time_indicator: true, // Indication of the current time in the graph: `true` | `false`
         ),
-        greeting: true, // Display greeting message: `true` | `false`
+        greeting: false, // Display greeting message: `true` | `false`
     ),
 )
 ```

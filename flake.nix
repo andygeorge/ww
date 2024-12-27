@@ -29,7 +29,6 @@
 							rustPlatform.bindgenHook
 						];
 						buildInputs = [ openssl ];
-
 						checkFlags = [
 							# connecting to internet does not work in the sandbox
 							"--skip=modules::location::tests::geolocation_response"

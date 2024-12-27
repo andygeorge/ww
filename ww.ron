@@ -1,4 +1,4 @@
-/* Configuration for ww the ww, your weather companion for the terminal
+/* Configuration for `ww`, your weather companion for the terminal
 Lin: ~/.config/ww/
 Mac: ~/Library/Application Support/ww/
 Win: %USERPROFILE%\AppData\Roaming\ww\
@@ -24,6 +24,6 @@ Win: %USERPROFILE%\AppData\Roaming\ww\
             rowspan: double, // Graph height: `double` | `single`
             time_indicator: true, // Indication of the current time in the graph: `true` | `false`
         ),
-        greeting: true, // Display greeting message: `true` | `false`
+        greeting: false, // Display greeting message: `true` | `false`
     ),
 )

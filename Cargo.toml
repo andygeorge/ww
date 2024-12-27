@@ -1,7 +1,7 @@
 [package]
 name = "ww"
 version = "1.2.1"
-authors = ["Turiiya <tobmoj@web.de>"]
+authors = ["Turiiya <tobmoj@web.de>","Andy George <andygeorge@hey.com>"]
 edition = "2021"
 license = "MIT"
 description = "Weather companion for the terminal"
@@ -10,7 +10,7 @@ homepage = "https://github.com/andygeorge/ww"
 repository = "https://github.com/andygeorge/ww"
 keywords = ["cli", "weather", "meteorological", "terminal"]
 categories = ["command-line-utilities"]
-rust-version = "1.74.0"
+rust-version = "1.81.0"
 
 [dependencies]
 anyhow = "1.0"

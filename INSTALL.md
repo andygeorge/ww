@@ -63,9 +63,9 @@ Package manager installation examples are shown below.
 
 #### 2. Unicode symbol font
 
-A Unicode symbol font("emoji-font") needs to be available on the system.
+A Unicode symbol font ("emoji-font") needs to be available on the system.
 It is likely already installed if you see emojis correctly rendered in your browser and in other applications.
-It will also allow to display line characters that are used in wws daily weather graphs.
+It will also allow to display line characters that are used in `ww`'s daily weather graphs.
 Noto fonts that add support for Unicode glyphs are usually available via the package manager.
 
 - macOS
@@ -117,7 +117,7 @@ There are several alternatives to the installation via `cargo`.
   nix profile install "github:andygeorge/ww"
   ```
   ```sh
-  nix run "github:tobealive/ww"
+  nix run "github:andygeorge/ww"
   ```
 - On Arch Linux, `ww` can be installed from the [AUR](https://aur.archlinux.org/packages?O=0&SeB=nd&K=ww&outdated=&SB=p&SO=d&PP=50&submit=Go) using an [AUR helper](https://wiki.archlinux.org/title/AUR_helpers). For example:
   ```
