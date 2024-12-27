@@ -1,4 +1,4 @@
-# ww
+# 🦀 `ww`
 
 [![][ci_shield]](https://github.com/andygeorge/ww/actions/workflows/ci.yml?query=branch%3Amain)
 [![][last_commit_shield]](https://github.com/andygeorge/ww/commits/main)
@@ -140,7 +140,6 @@ Win: `%USERPROFILE%\AppData\Roaming\ww\`
 ## Installation
 
 Use rusts package manger to install ww.
-
 
 **From crates.io**
 

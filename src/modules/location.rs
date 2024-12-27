@@ -1,4 +1,4 @@
-use anyhow::{anyhow, Result};
+use anyhow::{anyhow, bail, Result};
 use dialoguer::{theme::ColorfulTheme, Confirm};
 use reqwest::Client;
 use serde::Deserialize;
@@ -106,20 +106,20 @@ impl Location {
 
 	pub async fn resolve_input(arg_address: &str, config: &Config, texts: &Locales) -> Result<String> {
 		if arg_address.is_empty() && config.address == "arg_input" {
-			return Err(anyhow!("Your configuration requires you to specify a city."));
+			bail!("Your configuration requires you to specify a city.");
 		};
 
-		let prompt_user = arg_address.is_empty() && config.address.is_empty();
+		let show_station_search_prompt = arg_address.is_empty() && config.address.is_empty();
 		if config.gui.greeting {
-			println!("{} 🦀  {}", if prompt_user { "" } else { " " }, texts.greeting);
+			println!("{} 🦀  {}", if show_station_search_prompt { "" } else { " " }, texts.greeting);
 		}
 
-		if prompt_user {
+		if show_station_search_prompt {
 			if !Confirm::with_theme(&ColorfulTheme::default())
 				.with_prompt(&texts.search_station)
 				.interact()?
 			{
-				std::process::exit(1)
+				std::process::exit(0)
 			}
 
 			let auto_loc = ApiQuery::geo_ip().query::<GeoIpLocation>().await?;
